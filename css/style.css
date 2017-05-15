@@ -1,0 +1,12 @@
+#grid {
+	width: 512px;
+	height: 512px;
+	margin: auto;
+}
+
+#gridSegment {
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	display: block;
+}
