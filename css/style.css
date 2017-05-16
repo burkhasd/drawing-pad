@@ -1,12 +1,38 @@
-#grid {
-	width: 512px;
-	height: 512px;
-	margin: auto;
+#container {
+    position: relative;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
 }
 
-#gridSegment {
-	width: 30px;
-	height: 30px;
-	border: 1px solid black;
-	display: block;
+.column {
+    border: 1px solid white;
+    background-color: #f2f2f2;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+#buttonSpace {
+	margin-left: auto;
+	margin-right: auto;
+	width: 275px;
+	display: table;
+	padding-left: 50px;
+}
+
+.button {
+	border: 2px solid #f2f2f2;
+	background-color: lightgrey;
+	border-radius: 10px;
+	margin: auto;
+	text-align: center;
+	width: 75px;
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
