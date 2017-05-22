@@ -8,6 +8,7 @@ $(document).ready(function() {
 			var newColumn = $('<div class="column"></div>');
 			$('.row').append(newColumn);
 		}
+		pixelResize(size);
 	}
 
 	function pixelResize(gridWidth) {		//resize pixels to fit grid
@@ -17,20 +18,26 @@ $(document).ready(function() {
 		$('#container').css('width', (gridWidth * (pixelSize + 2)) + 'px');
 	}
 
-	function colorChange() {
+	function draw() {
 		$(document).on('mouseover', '.column', function() {
 			$(this).css('background-color', '#b9def7');
 		});
 	}
 
-	function colorSelect() {
-		$(document).on('mouseover', '#colorPicker', function() {
-			var color = $('#colorPicker').css('background-color');
-			console.log(color);
-		})
-	}
+	$('#sizePicker').on('click', function() {
+		var newSize = prompt("Enter a side length", "16");
 
+		if (newSize === null) {
+			return;
+		} else {			
+		$('#container').empty();
+		createGrid(newSize);
+		}
+	});
 
+	$('#reset').on('click', function() {
+		$('.column').css('background-color', '#f2f2f2');
+	});
 
 
 	var originalSize = 16;
@@ -39,8 +46,7 @@ $(document).ready(function() {
 	pixelResize(originalSize);
 
 
-	colorChange();
-	colorSelect();
+	draw();
+
 
 });
-
